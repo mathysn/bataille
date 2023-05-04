@@ -14,8 +14,8 @@ public class Main {
             Carte carte1 = joueur1.playCarte();
             Carte carte2 = joueur2.playCarte();
 
-            System.out.println("(" + joueur1.getCartes().size() + ") " + joueur1.getNom() + ": " + carte1.getNom());
-            System.out.println("(" + joueur2.getCartes().size() + ") " + joueur2.getNom() + ": " + carte2.getNom());
+            System.out.println("(" + (joueur1.getCartes().size() + 1) + ") " + joueur1.getNom() + ": " + carte1.getNom());
+            System.out.println("(" + (joueur2.getCartes().size() + 1) + ") " + joueur2.getNom() + ": " + carte2.getNom());
 
             if(carte1.getValeur() > carte2.getValeur()) {
                 joueur1.addCarte(carte1);
@@ -49,7 +49,6 @@ public class Main {
                         carte1 = joueur1.playCarte();
                         carte2 = joueur2.playCarte();
 
-
                         System.out.println(ConsoleColors.RED_BOLD + "\nBataille!" + ConsoleColors.RESET);
 
                         if(carte1 == null) {
@@ -63,8 +62,8 @@ public class Main {
                             enjeu.add(carte2);
                         }
 
-                        System.out.println("(" + joueur1.getCartes().size() + ") " + joueur1.getNom() + ": " + carte1.getNom());
-                        System.out.println("(" + joueur2.getCartes().size() + ") " + joueur2.getNom() + ": " + carte2.getNom());
+                        System.out.println("(" + (joueur1.getCartes().size() + 1) + ") " + joueur1.getNom() + ": " + carte1.getNom());
+                        System.out.println("(" + (joueur2.getCartes().size()  + 1) + ") " + joueur2.getNom() + ": " + carte2.getNom());
 
                         if (carte1.getValeur() > carte2.getValeur()) {
                             joueur1.addCartes(enjeu);

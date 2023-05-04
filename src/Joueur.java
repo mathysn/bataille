@@ -15,6 +15,7 @@ public class Joueur {
 
     public void addCartes(List<Carte> cartes) {
         this.cartes.addAll(cartes);
+        cartes.clear();
     }
 
     public boolean aDesCartes() {
